@@ -1,16 +1,22 @@
 def squared_sum(a, b)
   # Q1 CODE HERE
-
+  stuff = a + b
+  stuff ** 2
 end
 
 def sort_array_plus_one(a)
-  # Q2 CODE HERE
-
+  new_arr = Array.new
+  while a.length > 0
+    x = a.min
+    a.delete(x)
+    x = x + 1
+    new_arr << x
+  end
+  new_arr
 end
 
 def combine_name(first_name, last_name)
-  # Q3 CODE HERE
-
+  first_name + " " + last_name
 end
 
 def blockin_time(a)
@@ -48,5 +54,11 @@ def scrabble(word)
     y: 4,
     z: 10,
   }
-  # Q5 CODE HERE
+  sum = 0
+  word.split("").each do |i|
+    if i != nil
+      sum += values[i]
+    end
+  end
+  sum
 end
