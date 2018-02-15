@@ -55,10 +55,8 @@ def scrabble(word)
     z: 10,
   }
   sum = 0
-  word.split("").each do |i|
-    if i != nil
-      sum += values[i]
-    end
+  word.split('').each do |i|
+    sum += values[i.to_sym]
   end
   sum
 end
